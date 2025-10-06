@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nike Store</title>
     <link rel="stylesheet" href="../estilo/style.css">
+
 </head>
 <body>
     
@@ -25,16 +26,16 @@
 
         <!--Produto 1-->
         <div class="produto">
-            <div class="imagem-produto"><img src="" alt=""></div>
-            <div class="descricao">Produto 1 - Descrição do Item</div>
-            <div class="preco">R$ 19,90</div>
+            <div class="imagem-produto"><img src="imagens/produtos/air force 1.jfif" alt="Produto 1"></div>
+            <div class="descricao">Produto 1 - Nike Air Force Branco</div>
+            <div class="preco">R$ 250,00</div>
             <button class="botao-carrinho">Adicionar ao Carrinho</button>
         </div>
     
 
         <!--Produto 2-->
         <div class="produto">
-            <div class="imagem-produto"><img src="" alt=""></div>
+            <div class="imagem-produto"><img src="imagens/produtos/nike air max.webp" alt=""></div>
             <div class="descricao">Produto 2 - Descrição do Item</div>
             <div class="preco">R$ 29,90</div>
             <button class="botao-carrinho">Adicionar ao Carrinho</button>
@@ -143,11 +144,42 @@
         <ul>
             <li>Email: <a href="mailto:atendimento@loja.com">atendimento@loja.com</a></li>
             <li>Telefone: <strong>(11) 1234-5678</strong></li>
-            <li>WhatsApp: <a href="https://"></a></li>
+            <li>WhatsApp: <a href="https://wa.me/551112345678" target="_blank">Clique aqui paraconversar no WhatsApp</a></li>
         </ul>
     </section>
 
+    <section id="faq">
+        <h1>Perguntas Frequentes (FAQ)</h1>
+
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer('faq1')">Como faço para trocar um produto?</h3>
+            <p id="faq1" class="faq-answer">Para trocar um produto, entre em contato com nosso SAC através do e-mail ou WhatsApp, e forneça o número do seu pedido.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer('faq2')">Como posso acompanhar meu pedido?</h3>
+            <p id="faq2" class="faq-answer">Você pode acompanhar seu pedido através do link de rastreamento que enviamos por e-mail ou na área do cliente em nosso site.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer('faq3')">Qual é o prazo de entrega?</h3>
+            <p id="faq3" class="faq-answer">O prazo de entrega depende da sua localização e da modalidade escolhida. Geralmente, as entregas são feitas em até 7 dias úteis.</p>
+        </div>
+
+    </section>
+
     <script>
+
+        // FAQ
+        function toggleAnswer(faqId) {
+        var answer = document.getElementById(faqId);
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+        }
+
         //Elementos principais do carrinho
         const btnContadorCarrinho = document.getElementById('btn-carrinho');
         const carrinho = document.getElementById('carrinho-lateral');
